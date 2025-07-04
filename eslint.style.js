@@ -102,7 +102,7 @@ const rules = {
 }
 
 export default {
-  settings: { node: { version: '>=22.15.0' } },
+  // settings: { node: { version: '>=20.15.0' } },
   plugins: {
     n: nodePlugin,
    '@stylistic': stylistic
