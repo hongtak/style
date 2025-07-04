@@ -1,19 +1,30 @@
 {
   "name": "@hongtak/style",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Javascript Coding Style",
   "main": "eslint.style.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["JavaScript", "ESLint", "ESLint config", "lint", "linter",
-    "style checker", "style linter", "code checker", "code linter", "code style",
-    "coding style", "JavaScript Coding Style"],
+  "keywords": [
+    "JavaScript",
+    "ESLint",
+    "ESLint config",
+    "lint",
+    "linter",
+    "style checker",
+    "style linter",
+    "code checker",
+    "code linter",
+    "code style",
+    "coding style",
+    "JavaScript Coding Style"
+  ],
   "author": "Choi Hong Tak <hongtak@gmail.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hongtak/style"
+    "url": "git+https://github.com/hongtak/style.git"
   },
   "type": "module",
   "dependencies": {
