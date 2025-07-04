@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "type": "module",
-  "devDependencies": {
+  "dependencies": {
     "@stylistic/eslint-plugin": "^5.1.0",
     "eslint-plugin-n": "^17.21.0"
   }
