@@ -7,7 +7,7 @@ export default [
   nodePlugin.configs['flat/recommended-module'],
   {
     plugins: {
-    '@stylistic': stylistic
+      '@stylistic': stylistic
     },
     rules: rules
   }
