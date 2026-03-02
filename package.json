@@ -1,6 +1,6 @@
 {
   "name": "@hongtak/style",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "Javascript Coding Style",
   "main": "eslint.style.js",
   "scripts": {
