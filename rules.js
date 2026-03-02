@@ -95,5 +95,9 @@ export const rules = {
   '@stylistic/object-curly-spacing': ['error', 'always'],
   '@stylistic/quote-props': ['error', 'as-needed'],
   '@stylistic/object-curly-newline': ['error', { consistent: true }],
-  '@stylistic/array-bracket-spacing': ['error']
+  '@stylistic/array-bracket-spacing': ['error'],
+  // ----------
+  'no-unused-vars': ['error', {
+    argsIgnorePattern: '^_'
+  }]
 }
