@@ -1,4 +1,6 @@
-export const rules = {
+import type { Linter } from 'eslint'
+
+export const rules: Linter.RulesRecord = {
   '@stylistic/indent': ['error', 2, { SwitchCase: 1 }],
   '@stylistic/quotes': ['error', 'single'],
   '@stylistic/keyword-spacing': ['error'],
