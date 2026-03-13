@@ -1,10 +1,19 @@
 {
   "name": "@hongtak/style",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Javascript Coding Style",
-  "main": "eslint.style.js",
+  "main": "./dist/eslint.style.js",
+  "types": "./dist/eslint.style.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js"
+    }
   },
   "keywords": [
     "JavaScript",
@@ -27,8 +36,14 @@
     "url": "git+https://github.com/hongtak/style.git"
   },
   "type": "module",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@stylistic/eslint-plugin": "^5.1.0",
     "eslint-plugin-n": "^17.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3"
   }
 }
