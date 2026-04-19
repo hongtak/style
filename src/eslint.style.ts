@@ -1,17 +1,21 @@
 import js from '@eslint/js'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
-// import { defineConfig } from 'eslint/config'
-// import type { TSESLint } from "@typescript-eslint/utils";
 import type { Linter } from 'eslint'
 
 import nodePlugin from 'eslint-plugin-n'
 import stylistic from '@stylistic/eslint-plugin'
 
 const config: Linter.Config[] = [
+  {
+    plugins: { js },
+    languageOptions: {
+      globals: globals.node 
+    }
+  },
+  nodePlugin.configs['flat/recommended'],
   ...tseslint.configs.recommended,
   ...tseslint.configs.stylistic,
-  nodePlugin.configs['flat/recommended'],
   stylistic.configs.recommended,
   {
     files: ['**/*.ts'],
