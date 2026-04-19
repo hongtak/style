@@ -1,12 +1,13 @@
 {
   "name": "@hongtak/style",
-  "version": "1.0.16",
+  "version": "1.0.19",
   "description": "Javascript Coding Style",
   "main": "./dist/eslint.style.js",
   "types": "./dist/eslint.style.d.ts",
   "exports": {
     ".": {
       "types": "./dist/eslint.style.d.ts",
+      "import": "./dist/eslint.style.js",
       "require": "./dist/eslint.style.js"
     }
   },
@@ -46,6 +47,6 @@
     "typescript-eslint": "^8.57.0"
   },
   "devDependencies": {
-    "typescript": "^5.9.3"
+    "typescript": "^6.0.3"
   }
 }
