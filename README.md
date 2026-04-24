@@ -15,14 +15,12 @@ $ npm i -D @hongtak/style
 To setup, you'll need to add the following lines: **(requires eslint>=v9.0.0)**
 
 ```javascript
+import { defineConfig } from 'eslint/config'
 import style from '@hongtak/style'
 
 export default defineConfig([
-  { files: ['**/*.{js,mjs,cjs}'], plugins: { js }, extends: ['js/recommended'] },
-  { files: ['**/*.{js,mjs,cjs}'], languageOptions: { globals: globals.node } },
-  style
+  style,
 ])
-
 ```
 
 Note: It recommends a use of the "engines" field of package.json. The "engines" field is used by n/no-unsupported-features/* rules.

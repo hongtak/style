@@ -7,16 +7,17 @@ import nodePlugin from 'eslint-plugin-n'
 import stylistic from '@stylistic/eslint-plugin'
 
 const config: Linter.Config[] = [
-  {
-    plugins: { js },
-    languageOptions: {
-      globals: globals.node 
-    }
-  },
-  nodePlugin.configs['flat/recommended'],
+  js.configs.recommended,
+  nodePlugin.configs['flat/recommended-module'],
+  stylistic.configs.recommended,
   ...tseslint.configs.recommended,
   ...tseslint.configs.stylistic,
-  stylistic.configs.recommended,
+  {
+    files: ['**/*.ts,**/*.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
   {
     files: ['**/*.ts'],
     rules: {
@@ -28,7 +29,8 @@ const config: Linter.Config[] = [
     rules: {
       // stylistic rules
       '@stylistic/brace-style': ['error', '1tbs'],
-      '@stylistic/function-call-spacing': ['error', 'never'],
+      // '@stylistic/function-call-spacing': ['error', 'never'],
+      // '@stylistic/space-before-function-paren': ['error', 'always'],
 
       // eslint-plugin-n rules
       'n/handle-callback-err': ['error', '^(err|error)$'],
@@ -77,8 +79,8 @@ const config: Linter.Config[] = [
       'padded-blocks': ['error', 'never'],
       'yoda': ['error'],
       'no-var': ['error'],
-    }
-  }
+    },
+  },
 ]
 
 export default config
