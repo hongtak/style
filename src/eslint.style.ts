@@ -41,7 +41,7 @@ const config: Linter.Config[] = [
       'no-undef': ['error', { typeof: true }],
       'one-var': ['error', 'never'],
       'camelcase': ['error', { properties: 'never' }],
-      'new-cap': ['error'],
+      // 'new-cap': ['error'],
       'accessor-pairs': ['error'],
       'no-array-constructor': ['error'],
       'no-caller': ['error'],
