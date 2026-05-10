@@ -1,17 +1,20 @@
 import js from '@eslint/js'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
-import type { Linter } from 'eslint'
+import { defineConfig } from 'eslint/config'
 
-import nodePlugin from 'eslint-plugin-n'
+import node from 'eslint-plugin-n'
 import stylistic from '@stylistic/eslint-plugin'
 
-const config: Linter.Config[] = [
+export default defineConfig([
   js.configs.recommended,
-  nodePlugin.configs['flat/recommended-module'],
+  {
+    plugins: { n: node },
+    extends: ['n/recommended-module'],
+  },
   stylistic.configs.recommended,
-  ...tseslint.configs.recommended,
-  ...tseslint.configs.stylistic,
+  tseslint.configs.recommended,
+  tseslint.configs.stylistic,
   {
     files: ['**/*.ts,**/*.js'],
     languageOptions: {
@@ -29,7 +32,7 @@ const config: Linter.Config[] = [
     rules: {
       // stylistic rules
       '@stylistic/brace-style': ['error', '1tbs'],
-      // '@stylistic/function-call-spacing': ['error', 'never'],
+      '@stylistic/function-call-spacing': ['error', 'never'],
       // '@stylistic/space-before-function-paren': ['error', 'always'],
 
       // eslint-plugin-n rules
@@ -81,6 +84,6 @@ const config: Linter.Config[] = [
       'no-var': ['error'],
     },
   },
-]
+])
 
-export default config
+// export default config

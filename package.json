@@ -1,6 +1,6 @@
 {
   "name": "@hongtak/style",
-  "version": "1.1.5`",
+  "version": "1.1.6",
   "description": "Javascript Coding Style",
   "main": "./dist/eslint.style.js",
   "types": "./dist/eslint.style.d.ts",
@@ -42,7 +42,7 @@
   "dependencies": {
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.1.0",
-    "eslint-plugin-n": "^17.21.0",
+    "eslint-plugin-n": "^18.0.1",
     "globals": "^17.4.0",
     "typescript-eslint": "^8.57.0"
   },
